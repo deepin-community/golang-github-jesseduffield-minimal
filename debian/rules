@@ -1,4 +1,6 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_INSTALL_EXTRA := gitignore/testfs gitignore/testgitignore
+
 %:
-	dh $@
+	dh $@ --builddirectory=debian/build --buildsystem=golang
